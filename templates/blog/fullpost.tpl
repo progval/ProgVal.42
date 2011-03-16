@@ -2,7 +2,7 @@
 {% load i18n %}
 {% load markup %}
 
-{% block title %}blog{% endblock %}
+{% block title %}{% trans "Post list" %}{% endblock %}
 
 {% block body %}
 	<div class="post">

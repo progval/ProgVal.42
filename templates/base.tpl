@@ -20,9 +20,22 @@
 			</li>
 			<li>
 				{% block menu_blog %}
-					<a href="/blog/">{% trans "Blog" %}</a></li>
+					<a href="/blog/">{% trans "Blog" %}</a>
 				{% endblock %}
 			</li>
+			{% if authenticated %}
+				<li>
+					<a href="/users/disconnect/">{% trans "Disconnect" %}</a>
+				</li>
+			{% else %}
+				<li>
+					<a href="/users/connect/">{% trans "Connect" %}</a>
+				</li>
+				<li>
+					<a href="/users/register/">{% trans "Register" %}</a>
+				</li>
+			{% endif %}
+				
 		</ul>
 		<div id="body">
 			{% block body %}

@@ -1,6 +1,8 @@
 {% extends "base.tpl" %}
 {% load i18n %}
 
+{% block title %}{{ post.title }}{% endblock %}
+
 {% block body %}
 	<h2>{% trans "Post list" %}</h2>
 
